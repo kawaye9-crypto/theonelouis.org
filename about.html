@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheOneLouis - Architect of Unconventional Ideas</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Reset & Global Styles */
+        :root {
+            --color-dark: #1e1e1e;
+            --color-light: #ffffff;
+            --color-accent: #00bcd4; /* Vibrant Teal */
+            --color-text: #cccccc;
+            --font-main: 'Poppins', sans-serif;
+            --section-padding: 80px 5%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--color-text);
+            background-color: var(--color-dark);
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        a {
+            color: var(--color-accent);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: var(--color-light);
+        }
+
+        h1, h2, h3 {
+            color: var(--color-light);
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section {
+            padding: var(--section-padding);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        /* --- Header & Navigation --- */
+        .header {
+            background-color: rgba(30, 30, 30, 0.95);
+            padding: 15px 5%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        .nav a {
+            margin-left: 30px;
+            font-weight: 600;
+            color: var(--color-light);
+            text-transform: uppercase;
+        }
+        
+        /* --- Hero Section --- */
+        #home {
+            min-height: 85vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            /* UPDATED: Added test.jpg as background image */
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('test.jpg') no-repeat center center/cover;
+        }
+
+        .hero-content {
+            padding: 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero-content p {
+            font-size: 1.5em;
+            font-weight: 300;
+            color: var(--color-accent);
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--color-accent);
+            color: var(--color-dark);
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--color-light);
+            color: var(--color-dark);
+            transform: scale(1.05);
+        }
+        
+        /* --- About Section --- */
+        #about {
+            background-color: #252525;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+        
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background-color: #333; /* Placeholder color */
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: italic;
+        }
+
+        .about-image img {
+             /* Ensures image fills the container */
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .about-text {
+            text-align: left;
+        }
+        
+        /* --- Work Section --- */
+        #work {
+            text-align: center;
+        }
+        
+        .work-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .project-card {
+            background-color: #252525;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: left;
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background-color: #333; /* Placeholder color */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-style: italic;
+            overflow: hidden; /* Ensure image doesn't overflow */
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensures image covers the area without distortion */
+        }
+        
+        .project-info {
+            padding: 20px;
+        }
+        
+        .project-info h3 {
+            margin-bottom: 5px;
+        }
+
+        /* --- Testimonials Section --- */
+        #testimonials {
+            background-color: #252525;
+            text-align: center;
+        }
+
+        .testimonial-container {
+            max-width: 800px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        
+        .testimonial-box {
+            background-color: #1e1e1e;
+            padding: 25px;
+            border-left: 4px solid var(--color-accent);
+            border-radius: 5px;
+            text-align: left;
+        }
+        
+        .quote {
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
+        .press-logos {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .press-logo {
+            height: 30px; /* Adjust size as needed */
+            filter: grayscale(100%);
+            opacity: 0.7;
+        }
+
+        /* --- Connect Section --- */
+        #connect {
+            text-align: center;
+        }
+        
+        /* Removed form-container CSS as the form is removed */
+        
+        .social-links {
+            margin-top: 30px;
+            font-size: 2em;
+        }
+
+        .social-links a {
+            margin: 0 15px;
+            color: var(--color-light);
+        }
+
+        .social-links a:hover {
+            color: var(--color-accent);
+        }
+
+        /* --- Footer --- */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9em;
+        }
+        
+        .footer a {
+            margin: 0 10px;
+        }
+
+        /* --- Media Queries for Responsiveness --- */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 3em;
+            }
+            
+            .nav a {
+                margin-left: 15px;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                height: 300px;
+                order: -1; /* Puts image above text on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">TheOneLouis</div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="Modpack.html">Work</a>
+            <a href="#connect">Connect</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="hero-content">
+            <h1>TheOneLouis</h1>
+            <p>The Architect of Unconventional Ideas.</p>
+            <a href="#work" class="cta-button">EXPLORE THE LATEST</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Behind The Name: Who is Louis?</h2>
+        <div class="about-grid">
+            <div class="about-text">
+                <p><strong>[Paragraph 1: The Mission]</strong> I'm Louis, and I believe that **art should challenge expectation** and technology should simplify life. My work is dedicated to blending innovative design with practical function, creating experiences that are both beautiful and impactful. This space is a window into that dedication.</p>
+                <br>
+                <p><strong>[Paragraph 2: The Background]</strong> Based in [Your City], my journey began [Year/Key Moment]. I've since spent my time mastering [Your Main Skill] and have had the privilege of collaborating with [a notable group or entity]. The constant pursuit of the *next great thing* is what drives me every day.</p>
+                <br>
+                <p><strong>[Paragraph 3: The Personal Touch]</strong> When I'm not [Working Activity], you can often find me [a hobby, e.g., searching for vintage vinyl, hiking with my dog]. My personal life fuels my creative one, adding unique perspectives to every project I undertake.</p>
+                <br>
+            </div>
+            <div class="about-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="work">
+        <h2>The Work: Vision into Reality</h2>
+        <div class="work-grid">
+            
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="theonelouis_logo_3.png" alt="Project Polaris image">
+                </div>
+                <div class="project-info">
+                    <h3>Project Polaris</h3>
+                    <p>A ground-up redesign of an enterprise platform, focusing on user experience and accessibility.</p>
+                    <a href="#">View Channel →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="theonelouis logo.jpg" alt="The Delta Album image">
+                </div>
+                <div class="project-info">
+                    <h3>Theonelouis</h3>
+                    <p>My main channel where I post Minecraft content.</p>
+                    <a href="https://www.youtube.com/@THEONELOUIS">View Channel →</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="download.png" alt="Louis's casual portrait or logo detail">
+                </div>
+                <div class="project-info">
+                    <h3>Gallery Series 04</h3>
+                    <p>A collection of abstract expressionist paintings challenging the relationship between color and form.</p>
+                    <a href="#">View Channel →</a>
+                </div>
+            </div>
+
+        </div>
+        <a href="Modpack.html" class="cta-button" style="margin-top: 50px;">SEE ALL PROJECTS</a>
+    </section>
+
+    <section id="testimonials">
+        <h2>Trusted By The Best</h2>
+        <div class="testimonial-container">
+            
+            <div class="testimonial-box">
+                <p class="quote">"Louis possesses a unique talent for solving complex problems with elegant simplicity. Working with him was a game-changer for our team."</p>
+                <p><strong>— Jane Doe, CEO of Acme Corp</strong></p>
+            </div>
+
+            <div class="testimonial-box">
+                <p class="quote">"The quality and execution were flawless. TheOneLouis delivered far beyond our expectations and redefined our standards."</p>
+                <p><strong>— John Smith, Lead Curator</strong></p>
+            </div>
+            
+        </div>
+
+        <div class="press-logos">
+            <img src="#" alt="Forbes Logo" class="press-logo">
+            <img src="#" alt="TechCrunch Logo" class="press-logo">
+            <img src="#" alt="Spotify Logo" class="press-logo">
+            <img src="#" alt="ArtDaily Logo" class="press-logo">
+        </div>
+    </section>
+
+    <section id="connect">
+        <h2>Let's Make Something Happen.</h2>
+        <p>I'm always looking for innovative collaborations and challenging new projects.</p>
+        
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScCvAeOu7h-3tII2j1gdHwGO_U6n5xo6zw7cKmyRhtRZLlmJw/viewform?usp=dialog" target="_blank" class="cta-button" style="margin: 30px auto; display: block; max-width: 300px;">
+            leave your contact info for future collaborations
+        </a>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/theonelouis_inc/" aria-label="Instagram">IG</a>
+            <a href="https://www.youtube.com/@THEONELOUIS" aria-label="YouTube">YT</a>
+            <a href="https://discord.gg/VAe8bRQQQH" aria-label="Discord">DIS</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 TheOneLouis. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a></p>
+        <p style="margin-top: 5px;">Built with passion.</p>
+    </footer>
+
+</body>
+</html>

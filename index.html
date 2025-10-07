@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THEONELOUIS | Official Website</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap');
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      /* Darker background for the entire page */
+      background: linear-gradient(135deg, #1a1a2e, #0f0f1c); /* Dark blue to nearly black */
+      color: #e0e0e0; /* Light gray for general text */
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    header {
+      /* Dark blue to black gradient for the header */
+      background: linear-gradient(to right, #0a1128, #000000);
+      padding: 5em 1em 4em;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5); /* Stronger shadow for dark theme */
+      color: white;
+    }
+
+    header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.8em;
+      color: #ffffff;
+      margin-bottom: 0.5em;
+    }
+
+    header p {
+      font-size: 1.3em;
+      color: #cccccc; /* Slightly softer white */
+      max-width: 750px;
+      margin: 0 auto;
+    }
+
+    nav {
+      /* Darker blue for nav bar */
+      background: #1a2a50;
+      display: flex;
+      justify-content: center;
+      padding: 1.2em;
+      gap: 2em;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1em;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background: #4a90e2; /* A brighter blue accent for hover */
+      transition: width 0.3s ease;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    section {
+      padding: 5em 1em;
+      text-align: center;
+    }
+
+    .hero {
+      /* Darker background for hero section */
+      background: #0f1c3d;
+      padding-bottom: 6em;
+      color: #e0e0e0; /* Light text on dark background */
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .hero h2 {
+      font-size: 3em;
+      color: #4a90e2; /* Bright blue accent */
+      margin-bottom: 0.5em;
+    }
+
+    .hero p {
+      color: #b0b0b0; /* Slightly muted light gray */
+      max-width: 650px;
+      margin: 0 auto 2em;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 30px;
+      margin: 0.5em;
+      background: #4a90e2; /* Bright blue button */
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4); /* Shadow matching button color */
+      transition: transform 0.2s, background 0.3s;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+      background: #3a7bd5; /* Darker blue on hover */
+    }
+
+    iframe {
+      width: 90%;
+      max-width: 560px;
+      height: 315px;
+      border-radius: 12px;
+      border: none;
+      margin: 2em 1em;
+      box-shadow: 0 0 25px rgba(74, 144, 226, 0.2); /* Blue tint shadow for videos */
+    }
+
+    .about, .modpacks {
+      /* Darker background for about/modpacks sections */
+      background-color: #0f1c3d;
+      color: #e0e0e0;
+      box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+    }
+
+    .about h2, .modpacks h2 {
+      color: #4a90e2; /* Bright blue accent */
+      margin-bottom: 1em;
+      font-size: 2.5em;
+    }
+
+    .about p, .modpacks p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #b0b0b0;
+      font-size: 1.15em;
+    }
+
+    footer {
+      /* Darker footer */
+      background: #000000;
+      text-align: center;
+      padding: 2em 1em;
+      font-size: 0.95em;
+      color: #cccccc;
+      box-shadow: inset 0 5px 15px rgba(0,0,0,0.6);
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.8em;
+      }
+
+      .hero h2 {
+        font-size: 2em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>THEONELOUIS</h1>
+    <p>Welcome to the official website of THEONELOUIS — get in touch, download modpacks, and support the channel with merch!</p>
+  </header>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="videos.html">Videos</a>
+    <a href="about.html">About</a>
+    <a href="Modpack.html">Modpacks</a>
+  </nav>
+
+  <section class="hero" id="home">
+    <h2>Watch. Laugh. Subscribe.</h2>
+    <p>Join the THEONELOUIS squad — Join my Discord, like and subscribe to my YouTube channels!</p>
+    <a href="https://www.youtube.com/@THEONELOUIS?sub_confirmation=1" target="_blank" class="button">Subscribe to THEONELOUIS</a>
+    <a href="https://www.youtube.com/@theonelouislive?sub_confirmation=1" target="_blank" class="button">Subscribe to THEONELOUIS Live</a>
+  </section>
+
+
+  <footer>
+    &copy; 2025 THEONELOUIS. All rights reserved.
+  </footer>
+
+</body>
+</html>

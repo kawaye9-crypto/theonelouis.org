@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Video Showcase</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* ========================================
+        CSS Variables for Easy Customization
+        ========================================
+        */
+        :root {
+            --primary-blue: #007bff;
+            --primary-blue-glow: rgba(0, 123, 255, 0.4);
+            --bg-dark: #0d1117; /* A modern off-black */
+            --bg-card: #161b22; /* Card background */
+            --text-light: #e6edf3;
+            --text-muted: #8b949e;
+            --border-color: #30363d;
+            --font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --border-radius: 12px;
+        }
+
+        /* ========================================
+        General & Body Styles
+        ========================================
+        */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            margin: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* ========================================
+        Header
+        ========================================
+        */
+        header {
+            background: linear-gradient(135deg, var(--bg-card), var(--bg-dark));
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: var(--text-light);
+            letter-spacing: -1px;
+        }
+
+        header h1 span {
+            color: var(--primary-blue);
+        }
+
+        header p {
+            font-size: 1.25rem;
+            margin-top: 10px;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* ========================================
+        Video Gallery
+        ========================================
+        */
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 35px;
+            padding: 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .video-container {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            
+            /* Animation */
+            opacity: 0;
+            animation: fadeIn 0.5s ease-out forwards;
+        }
+        
+        /* Staggered animation effect */
+        .video-container:nth-child(2) { animation-delay: 0.1s; }
+        .video-container:nth-child(3) { animation-delay: 0.2s; }
+
+        .video-container:hover,
+        .video-container:focus-within {
+            transform: translateY(-8px);
+            border-color: var(--primary-blue);
+            box-shadow: 0 12px 40px var(--primary-blue-glow);
+        }
+        
+        .video-content {
+            padding: 20px 25px;
+        }
+
+        .video-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            color: var(--text-light);
+            display: flex;
+            align-items: center;
+        }
+
+        .video-content h3 i {
+            color: var(--primary-blue);
+            margin-right: 12px;
+            font-size: 1.2rem;
+        }
+
+        .video-content p {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
+            color: var(--text-muted);
+        }
+
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* ========================================
+        Footer
+        ========================================
+        */
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 40px;
+            background-color: var(--bg-card);
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+        }
+        
+        /* ========================================
+        Responsiveness
+        ========================================
+        */
+        @media (max-width: 768px) {
+            header {
+                padding: 40px 15px;
+            }
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .video-gallery {
+                padding: 30px 15px;
+                grid-template-columns: 1fr; /* Stack on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Our Video <span>Showcase</span></h1>
+        <p>Explore our curated collection of projects, tutorials, and behind-the-scenes content.</p>
+    </header>
+
+    <main class="video-gallery">
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe loading="lazy" src="https://www.youtube.com/embed/your_video_id_1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-content">
+                <h3><i class="fa-solid fa-circle-play"></i>Video Title One</h3>
+                <p>A short, engaging description of what this video is about. Keep it brief and to the point.</p>
+            </div>
+        </div>
+
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe loading="lazy" src="https://www.youtube.com/embed/your_video_id_2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-content">
+                <h3><i class="fa-solid fa-circle-play"></i>Video Title Two</h3>
+                <p>A short, engaging description of what this video is about. Keep it brief and to the point.</p>
+            </div>
+        </div>
+
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe loading="lazy" src="https://www.youtube.com/embed/MCTGOQNRI-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="video-content">
+                <h3><i class="fa-solid fa-circle-play"></i>Bullying my friend in minecraft</h3>
+                <p>Bullying my friend in minecraft</p>
+            </div>
+        </div>
+        
+        </main>
+
+    <footer>
+        <p>&copy; 2025 Your Company Name. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
