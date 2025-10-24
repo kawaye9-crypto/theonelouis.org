@@ -5,301 +5,139 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>THEONELOUIS Modpacks- Official Modpack Website</title>
+    <link rel="stylesheet" href="styles2.css">
 </head>
-<body style="
-    font-family: monospace; 
-    color: #DDDDDD; 
-    background-color: #0D0D0D; 
-    line-height: 1.6;
-    margin: 0; 
-    padding: 0;
-">
+<body>
 
-    <header style="
-        background-color: #1A1A1A; 
-        padding: 15px 5%; 
-        position: sticky; 
-        top: 0; 
-        border-bottom: 3px solid #55AA55;
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center;
-    ">
-        <div style="font-size: 24px; color: #2f00ff; font-weight: bold; text-shadow: 2px 2px #000000;">
+    <header>
+        <div class="header-title">
             The Unconventional Pack
         </div>
         <nav>
-            <a href="index.html" style="color: #DDDDDD; text-decoration: none; margin-left: 20px;">[HOME]</a>
-            <a href="about.html" style="color: #DDDDDD; text-decoration: none; margin-left: 20px;">[ABOUT]</a>
-            <a href="#mods" style="color: #DDDDDD; text-decoration: none; margin-left: 20px;">[MOD LIST]</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScCvAeOu7h-3tII2j1gdHwGO_U6n5xo6zw7cKmyRhtRZLlmJw/viewform?usp=dialog" style="color: #DDDDDD; text-decoration: none; margin-left: 20px;">[CONTACT]</a>
-            <a href="store.html"style="color: #DDDDDD; text-decoration: none; margin-left: 20px;">Store</a>
+            <a href="index.html">HOME</a>
+            <a href="about.html">ABOUT</a>
+            <a href="#mods">MOD LIST</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScCvAeOu7h-3tII2j1gdHwGO_U6n5xo6zw7cKmyRhtRZLlmJw/viewform?usp=dialog">CONTACT</a>
+            <a href="store.html">STORE</a>
         </nav>
     </header>
 
-    <section id="home" style="
-        min-height: 80vh; 
-        display: flex; 
-        justify-content: center; 
-        align-items: center; 
-        text-align: center; 
-        background-color: #252525; 
-        border-bottom: 5px solid #55AA55;
-        padding: 60px 5%;
-    ">
-        <div style="
-            padding: 40px; 
-            border: 5px double #1900ff; 
-            background-color: rgba(20, 20, 20, 0.8);
-            max-width: 800px;
-        ">
-            <h1 style="font-size: 40px; margin-bottom: 10px; color: #FFFFFF; letter-spacing: 4px; text-shadow: 3px 3px #000000;">
+    <section id="home" class="hero modpack-hero">
+        <div class="hero-content-box">
+            <h1>
                 The Unconventional Pack
             </h1>
-            <p style="font-size: 20px; color: #55AA55; margin-bottom: 30px;">
+            <p>
                 Blend Tech & Magic. Break the Grind. Forge Your Legacy.
             </p>
-            <a href="#mods" style="
-                display: inline-block; 
-                background-color: #55AA55; 
-                color: #000000; 
-                padding: 10px 25px; 
-                border: 3px solid #000000; 
-                text-decoration: none;
-                font-size: 18px;
-                font-weight: bold;
-            ">EXPLORE THE MODS &rarr;</a>
+            <a href="#mods" class="button">EXPLORE THE MODS &rarr;</a>
         </div>
     </section>
 
-    <section id="about" style="
-        background-color: #1A1A1A; 
-        padding: 60px 5%; 
-        max-width: 1200px; 
-        margin: 0 auto;
-    ">
-        <h2 style="
-            font-size: 28px; 
-            margin-bottom: 30px; 
-            text-align: center; 
-            color: #1100ff;
-            display: block; 
-            border-bottom: 2px dashed #55AA55;
-            padding-bottom: 10px;
-        ">Behind The Blocks: What is This Pack?</h2>
+    <section id="about" class="about-modpack">
+        <h2>Behind The Blocks: What is This Pack?</h2>
         
-        <div style="
-            display: grid; 
-            grid-template-columns: 2fr 1fr; 
-            gap: 40px; 
-            align-items: center;
-        ">
-            <div style="text-align: left;">
-                <p style="margin-bottom: 15px;">
-                    <strong style="color: #2600ff;">[The Mission]</strong> This modpack is a hand-curated collection of over 250 mods designed to eliminate the repetitive grind and focus purely on creative progression. We blend complex automation with powerful magic to give you a truly <strong style="color: #1900ff;">unconventional</strong> Minecraft experience.
+        <div class="about-grid">
+            <div class="about-text">
+                <p>
+                    <strong>[The Mission]</strong> This modpack is a hand-curated collection of over 250 mods designed to eliminate the repetitive grind and focus purely on creative progression. We blend complex automation with powerful magic to give you a truly <strong>unconventional</strong> Minecraft experience.
                 </p>
-                <p style="margin-bottom: 15px;">
-                    <strong style="color: #1900ff;">[Core Experience]</strong> The pack features custom recipes and progression paths using <strong style="color: #1900ff;">KubeJS</strong> to ensure mods like Mekanism and Botania work together seamlessly. Expect unique starting items, overhauled world generation, and challenging end-game bosses.
+                <p>
+                    <strong>[Core Experience]</strong> The pack features custom recipes and progression paths using <strong>KubeJS</strong> to ensure mods like Mekanism and Botania work together seamlessly. Expect unique starting items, overhauled world generation, and challenging end-game bosses.
                 </p>
-                <p style="margin-bottom: 30px;">
-                    <strong style="color: #2600ff;">[Technical Info]</strong> Built on <strong style="color: #2f00ff;">Minecraft 1.20.1 (Forge)</strong>. We recommend allocating a minimum of <strong style="color: #4400ff;">8GB of RAM</strong> for a smooth, lag-free experience.
+                <p>
+                    <strong>[Technical Info]</strong> Built on <strong>Minecraft 1.20.1 (Forge)</strong>. We recommend allocating a minimum of <strong>8GB of RAM</strong> for a smooth, lag-free experience.
                 </p>
-                <a href="#connect" style="
-                    display: inline-block; 
-                    background-color: #1A1A1A; 
-                    color: #55AA55; 
-                    padding: 10px 25px; 
-                    border: 3px solid #55AA55; 
-                    text-decoration: none;
-                    font-weight: bold;
-                    font-size: 18px;
-                ">JOIN OUR DISCORD SERVER</a>
+                <a href="#connect" class="button secondary-button">JOIN OUR DISCORD SERVER</a>
             </div>
-            <div style="
-                width: 100%; 
-                height: 300px; 
-                background-color: #333333; 
-                border: 3px solid #55AA55; 
-                display: flex; 
-                justify-content: center; 
-                align-items: center; 
-                font-style: italic;
-            ">
+            <div class="image-placeholder">
                 [Screenshot Placeholder]
             </div>
         </div>
     </section>
 
-    <section id="mods" style="
-        text-align: center; 
-        background-color: #0D0D0D; 
-        padding: 60px 5%;
-    ">
-        <h2 style="
-            font-size: 28px; 
-            margin-bottom: 40px; 
-            text-align: center; 
-            color: #0004ff;
-            display: block; 
-            border-bottom: 2px dashed #55AA55;
-            padding-bottom: 10px;
-        ">The Mods</h2>
+    <section id="mods" class="mod-list-section">
+        <h2>The Mods</h2>
         
-        <div style="
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 30px; 
-            margin-top: 40px;
-        ">
+        <div class="products-grid">
             
-            <div style="
-                background-color: #1A1A1A; 
-                border: 2px solid #2600ff; 
-                text-align: left; 
-                padding: 15px;
-            ">
-                <div style="
-                    width: 100%; 
-                    height: 150px; 
-                    background-color: #333333; 
-                    border-bottom: 1px solid #55AA55; 
-                    margin-bottom: 10px;
-                    display: flex; 
-                    justify-content: center; 
-                    align-items: center; 
-                    font-style: italic;
-                "><img src="OIP.jpg" alt="tech mod image"></div>
-                <h3 style="margin-bottom: 5px; font-size: 20px; color: #55AA55;">[Magic Mod Image]</h3>
-                <p>Feeds off the power of <strong style="color: #2f00ff;">Mekanism</strong> and <strong style="color: #3700ff;">Create</strong>. Build massive, multi-block factories and complex logistics networks.</p>
-                <a href="#" style="color: #3700ff; text-decoration: none;">VIEW MOD DETAILS &rarr;</a>
+            <div class="product-card">
+                <div class="mod-image-placeholder"><img src="OIP.jpg" alt="tech mod image"></div>
+                <h3>Tech Domination</h3>
+                <p>Feeds off the power of **Mekanism** and **Create**. Build massive, multi-block factories and complex logistics networks.</p>
+                <a href="#" class="mod-link">VIEW MOD DETAILS &rarr;</a>
             </div>
 
-            <div style="
-                background-color: #1A1A1A; 
-                border: 2px solid #2600ff; 
-                text-align: left; 
-                padding: 15px;
-            ">
-                <div style="
-                    width: 100%; 
-                    height: 150px; 
-                    background-color: #333333; 
-                    border-bottom: 1px solid #55AA55; 
-                    margin-bottom: 10px;
-                    display: flex; 
-                    justify-content: center; 
-                    align-items: center; 
-                    font-style: italic;
-                ">[Magic Mod Image 1]</div>
-                <h3 style="margin-bottom: 5px; font-size: 20px; color: #55AA55;">Arcane Mastery</h3>
-                <p>Delve into <strong style="color: #4400ff;">Ars Nouveau</strong> and <strong style="color: #4400ff;">Forbidden & Arcanus</strong>. Master elemental magic and craft custom spell circles.</p>
-                <a href="#" style="color: #3700ff; text-decoration: none;">VIEW MOD DETAILS &rarr;</a>
+            <div class="product-card">
+                <div class="mod-image-placeholder">[Magic Mod Image 1]</div>
+                <h3>Arcane Mastery</h3>
+                <p>Delve into **Ars Nouveau** and **Forbidden & Arcanus**. Master elemental magic and craft custom spell circles.</p>
+                <a href="#" class="mod-link">VIEW MOD DETAILS &rarr;</a>
             </div>
 
-            <div style="
-                background-color: #1A1A1A; 
-                border: 2px solid #1100ff; 
-                text-align: left; 
-                padding: 15px;
-            ">
-                <div style="
-                    width: 100%; 
-                    height: 150px; 
-                    background-color: #333333; 
-                    border-bottom: 1px solid #55AA55; 
-                    margin-bottom: 10px;
-                    display: flex; 
-                    justify-content: center; 
-                    align-items: center; 
-                    font-style: italic;
-                ">[Exploration Mod Image]</div>
-                <h3 style="margin-bottom: 5px; font-size: 20px; color: #55AA55;">Exploration Overhaul</h3>
-                <p>Discover new biomes with <strong style="color: #2f00ff;">Terralith</strong> and conquer dangerous dungeons from <strong style="color: #1900ff;">When Dungeons Arise</strong>.</p>
-                <a href="#" style="color: #4c00ff; text-decoration: none;">VIEW MOD DETAILS &rarr;</a>
+            <div class="product-card">
+                <div class="mod-image-placeholder">[Exploration Mod Image]</div>
+                <h3>Exploration Overhaul</h3>
+                <p>Discover new biomes with **Terralith** and conquer dangerous dungeons from **When Dungeons Arise**.</p>
+                <a href="#" class="mod-link">VIEW MOD DETAILS &rarr;</a>
             </div>
 
         </div>
-        <a href="https://www.curseforge.com/minecraft" style="
-            display: inline-block; 
-            background-color: #3700ff; 
-            color: #000000; 
-            padding: 10px 25px; 
-            border: 3px solid #000000; 
-            text-decoration: none; 
-            margin-top: 50px;
-            font-size: 18px;
-            font-weight: bold;
-        ">VIEW FULL MOD LIST (250B+ MODS)</a>
+        <a href="https://www.curseforge.com/minecraft" class="button">VIEW FULL MOD LIST (250B+ MODS)</a>
     </section>
 
-    <section id="connect" style="
-        text-align: center; 
-        background-color: #1A1A1A; 
-        padding: 60px 5%;
-    ">
-        <h2 style="
-            font-size: 28px; 
-            margin-bottom: 30px; 
-            text-align: center; 
-            color: #3700ff;
-            display: block; 
-            border-bottom: 2px dashed #55AA55;
-            padding-bottom: 10px;
-        ">Connect With Our Community.</h2>
-        <p style="margin-bottom: 40px;">Whether you need help, want to share a build, or report a bug, we're here.</p>
+    <section id="connect" class="connect-section">
+        <h2>Connect With Our Community.</h2>
+        <p>Whether you need help, want to share a build, or report a bug, we're here.</p>
         
-        <div style="
-            max-width: 500px; 
-            margin: 40px auto 20px; 
-            background-color: #1A1A1A; 
-            padding: 30px; 
-            border: 3px solid #0004ff;
-        ">
-            <p style="font-size: 20px; margin-bottom: 20px;">Server IP: <strong style="color: #2f00ff; font-size: 24px;">play.unconventionalpack.net</strong></p>
-            <a href="https://discord.gg/VAe8bRQQQH" style="
-                display: inline-block; 
-                background-color: #55AA55; 
-                color: #000000; 
-                padding: 10px 25px; 
-                border: 3px solid #000000; 
-                text-decoration: none;
-                font-weight: bold;
-                font-size: 18px;
-            ">JOIN DISCORD</a>
+        <div class="server-info-box">
+            <p>Server IP: 
+                <strong id="server-ip">play.unconventionalpack.net</strong>
+                <input type="hidden" id="ip-to-copy" value="play.unconventionalpack.net">
+                <button id="copy-button" class="copy-button">Copy IP</button>
+            </p>
+            <a href="https://discord.gg/VAe8bRQQQH" class="button">JOIN DISCORD</a>
         </div>
 
-        <div style="margin-top: 30px; font-size: 20px;">
-            <a href="https://www.instagram.com/theonelouis_inc/" style="color: #DDDDDD; text-decoration: none; margin: 0 15px;">Instagram</a>
-            <span style="color: #55AA55;">|</span>
-            <a href="https://www.youtube.com/@THEONELOUIS" style="color: #DDDDDD; text-decoration: none; margin: 0 15px;">YOUTUBE</a>
+        <div class="social-links">
+            <a href="https://www.instagram.com/theonelouis_inc/">Instagram</a>
+            <span>|</span>
+            <a href="https://www.youtube.com/@THEONELOUIS">YOUTUBE</a>
         </div>
         
-        <div style="margin-top: 40px;">
-            <p style="margin-bottom: 15px;">Support Development:</p>
-            <a href="https://patreon.com/yourpack" style="
-                display: inline-block; 
-                background-color: #333333; 
-                color: #55AA55; 
-                padding: 10px 25px; 
-                border: 2px solid #55AA55; 
-                text-decoration: none;
-                font-weight: bold;
-                font-size: 18px;
-            ">DONATE &hearts;</a>
+        <div class="support-links">
+            <p>Support Development:</p>
+            <a href="https://patreon.com/yourpack" class="button secondary-button donate-button">DONATE &hearts;</a>
         </div>
     </section>
 
-    <footer style="
-        text-align: center; 
-        padding: 20px; 
-        border-top: 3px solid #55AA55; 
-        font-size: 14px;
-        background-color: #1A1A1A;
-    ">
+    <footer>
         <p>&copy; 2025 THEONELOUIS. | You know it.
         </p>
-        <p style="margin-top: 5px;">Minecraft 1.20.1-1.22 (Forge).</p>
+        <p>Minecraft 1.20.1-1.22 (Forge).</p>
     </footer>
 
-</body>
+    <script>
+        document.getElementById('copy-button').addEventListener('click', function() {
+            const copyText = document.getElementById('ip-to-copy').value;
+            
+            // Use the modern Clipboard API
+            navigator.clipboard.writeText(copyText).then(function() {
+                // Change button text to confirm copy, then revert
+                const button = document.getElementById('copy-button');
+                button.textContent = 'Copied!';
+                button.classList.add('copied');
+                
+                setTimeout(function() {
+                    button.textContent = 'Copy IP';
+                    button.classList.remove('copied');
+                }, 1500);
+            }).catch(function(err) {
+                // Fallback for older browsers
+                console.error('Could not copy text: ', err);
+                alert('Could not copy IP address automatically. Please copy manually: ' + copyText);
+            });
+        });
+    </script>
+    </body>
 </html>

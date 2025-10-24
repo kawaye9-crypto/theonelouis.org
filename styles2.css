@@ -1,0 +1,400 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto:wght@400;700&display=swap');
+
+/* --- General Reset & Base Styles (Black, Blue, White Theme) --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  /* Background: Black to dark blue blend */
+  background: linear-gradient(135deg, #000000, #0a1128);
+  color: #e0e0e0; /* Light gray for general text */
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* --- Header --- */
+header {
+  /* Header: Dark blue to black gradient */
+  background: linear-gradient(to right, #0a1128, #000000);
+  padding: 5em 1em 4em;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.8);
+  color: white;
+  position: relative;
+}
+
+header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3.8em;
+  color: #4a90e2; /* Bright blue title */
+  margin-bottom: 0.2em;
+}
+
+header p {
+  font-size: 1.3em;
+  color: #cccccc;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* --- Navigation --- */
+nav {
+  background: #1a2a50;
+  display: flex;
+  justify-content: center;
+  padding: 1.2em;
+  gap: 2.5em;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.7);
+  z-index: 10;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 5px 0;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #4a90e2;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #4a90e2;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+section {
+  padding: 5em 1em;
+  text-align: center;
+}
+
+/* --- Hero/Banner Section --- */
+.hero {
+  /* Hero: Slightly lighter dark blue for contrast */
+  background: #0f1c3d;
+  padding-bottom: 6em;
+  color: #e0e0e0;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.5);
+}
+
+.hero h2 {
+  font-size: 3em;
+  color: #ffffff; /* Use white for title on hero */
+  margin-bottom: 0.5em;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.hero p {
+  color: #b0b0b0;
+  max-width: 650px;
+  margin: 0 auto 2.5em;
+}
+
+/* --- Button Styles --- */
+.button {
+  display: inline-block;
+  padding: 14px 30px;
+  margin: 0.5em;
+  background: #4a90e2; /* Bright blue button */
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 6px 15px rgba(74, 144, 226, 0.5); /* Stronger shadow */
+  transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  background: #3a7bd5; /* Darker blue on hover */
+  box-shadow: 0 8px 20px rgba(74, 144, 226, 0.8); /* Glow on hover */
+}
+
+/* Secondary Button Style for Modpack Page (e.g., JOIN DISCORD) */
+.secondary-button {
+    background: transparent;
+    border: 2px solid #ffffff;
+    box-shadow: none;
+}
+.secondary-button:hover {
+    background: #4a90e2;
+    border: 2px solid #4a90e2;
+    box-shadow: 0 0 10px rgba(74, 144, 226, 0.7);
+}
+
+
+/* --- Product/Mod Grid & Cards --- */
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  padding-top: 2em;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: #1a1a2e; /* Dark card background */
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  padding: 1.5em;
+  width: 100%;
+  max-width: 300px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-8px); /* Lift higher */
+  box-shadow: 0 15px 30px rgba(74, 144, 226, 0.4); /* Stronger blue glow */
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1em;
+  border: 1px solid #0f1c3d;
+}
+
+.product-card h3 {
+  color: #ffffff; /* White title on card */
+  font-size: 1.5em;
+  margin-bottom: 0.2em;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.product-card .price {
+  color: #4a90e2; /* Bright blue price */
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-bottom: 0.8em;
+}
+
+.mod-link {
+    color: #4a90e2;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 1em;
+    transition: color 0.3s;
+}
+
+.mod-link:hover {
+    color: #ffffff;
+}
+
+.buy-button {
+  width: 100%;
+  text-align: center;
+  font-size: 1.1em;
+}
+
+/* --- Modpack Specific Layouts --- */
+.modpack-hero h1 {
+    font-size: 3.5em;
+    color: #4a90e2;
+}
+
+.about-modpack {
+  background-color: #000000; /* Pure black for maximum contrast */
+  padding: 8em 2em;
+  box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
+}
+
+.about-modpack h2 {
+    color: #4a90e2;
+}
+
+.about-grid {
+  display: flex;
+  max-width: 1200px;
+  margin: 4em auto 0;
+  gap: 4em;
+  text-align: left;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1.15em;
+}
+
+.about-text p {
+  margin-bottom: 1.5em;
+  color: #c0c0c0;
+}
+
+.image-placeholder {
+  flex: 1;
+  min-height: 350px;
+  background-color: #0d0d1f;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(74, 144, 226, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #4a90e2;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5em;
+  border: 1px solid #4a90e2;
+}
+
+.mod-list-section {
+    background: linear-gradient(135deg, #0f1c3d, #000000);
+}
+
+.mod-list-section h2 {
+    color: #ffffff;
+}
+
+/* Connect Section */
+/* Connect Section */
+.connect-section {
+    background-color: #0a1128;
+    padding-top: 5em;
+}
+
+.server-info-box {
+    margin: 3em auto;
+    padding: 2em;
+    max-width: 450px;
+    background: #1a2a50;
+    border-radius: 10px;
+    border: 2px solid #4a90e2;
+    box-shadow: 0 0 30px rgba(74, 144, 226, 0.5);
+}
+
+.server-info-box p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+.server-info-box strong {
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.5em;
+    /* --- FIX: Prevent the long IP from wrapping/breaking --- */
+    word-break: break-all;
+    word-wrap: normal;
+    white-space: nowrap; /* Keep it all on one line if possible */
+    overflow: hidden; /* Hide if it's too long */
+    text-overflow: ellipsis; /* Add "..." if it must be truncated */
+}
+
+/* New media query to shrink the IP text on tiny phones */
+@media (max-width: 400px) {
+    .server-info-box strong {
+        font-size: 1.2em; /* Reduce font size on small screens */
+    }
+}
+
+.social-links {
+    margin-top: 2em;
+}
+
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #4a90e2;
+}
+
+.social-links span {
+    color: #4a90e2;
+}
+
+.support-links {
+    margin-top: 3em;
+}
+
+/* --- Footer --- */
+footer {
+  background: #000000;
+  text-align: center;
+  padding: 2.5em 1em;
+  font-size: 0.95em;
+  color: #cccccc;
+  box-shadow: inset 0 5px 15px rgba(0,0,0,0.8);
+  border-top: 3px solid #4a90e2;
+}
+
+/* --- Media Queries --- */
+@media (max-width: 900px) {
+  .about-grid {
+      flex-direction: column;
+      text-align: center;
+  }
+  .image-placeholder {
+      min-height: 200px;
+  }
+}
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.8em;
+  }
+  .hero h2 {
+    font-size: 2em;
+  }
+  .products-grid {
+    gap: 1em;
+  }
+}
+
+/* --- Copy Button Styles --- */
+.copy-button {
+    /* Use button as base, but override for a smaller, distinct look */
+    display: inline-block;
+    padding: 6px 12px;
+    margin-left: 10px;
+    margin-top: 0; /* Remove top margin from the base button style */
+    background: #007bff; /* A standard bright blue for action */
+    color: white;
+    font-size: 0.9em;
+    font-weight: normal;
+    border: none;
+    border-radius: 4px;
+    box-shadow: none;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.copy-button:hover {
+    background: #0056b3;
+    transform: translateY(0); /* Disable the lift effect */
+}
+
+/* Style for when the button confirms success */
+.copy-button.copied {
+    background: #28a745; /* Green for success */
+    pointer-events: none; /* Prevent re-clicking while showing "Copied!" */
+}
