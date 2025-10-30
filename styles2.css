@@ -398,3 +398,87 @@ footer {
     background: #28a745; /* Green for success */
     pointer-events: none; /* Prevent re-clicking while showing "Copied!" */
 }
+
+/* --- Background Video Styles --- */
+.video-background {
+    /* 1. Fixes the video to the viewport */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* 2. Pushes the video behind all other content */
+    z-index: -100; 
+    overflow: hidden;
+    background: #000000;
+}
+
+.video-background video {
+    /* Ensures the video scales to cover the container */
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    
+    /* Centers the video */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+}
+
+/* --- Content Visibility Fix: Bring Content to the Front & Increase Transparency --- */
+
+/* Target all main structural elements on the page */
+header, nav, footer, section, .hero, #products {
+    /* 1. Ensure content is above the video */
+    position: relative; 
+    z-index: 10; 
+    
+    /* 2. NEW OPACITY: Dark blue overlay with 85% opacity (more transparent) */
+    background-color: rgba(10, 17, 40, 0.85) !important; 
+}
+
+/* Ensure the navigation bars maintain a readable background */
+nav {
+    /* Keep nav slightly more opaque if desired for better link readability */
+    background: rgba(26, 42, 80, 0.95) !important;
+}
+
+/* --- FIX: Ensure Navigation is Fully Opaque and Visible --- */
+
+/* Target the navigation bar container */
+nav {
+    /* Set position and high z-index to stack on top of everything */
+    position: relative; 
+    z-index: 50; /* Very high index to guarantee visibility */
+
+    /* Ensure a solid, fully opaque dark blue background */
+    background: #1a2a50 !important;
+    background-color: rgba(26, 42, 80, 1) !important; /* Opaque (1) dark blue */
+    
+    /* Add a clean, strong shadow to make it pop off the page */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.9) !important;
+    
+    display: flex; /* Keep original flex properties */
+    justify-content: center;
+    padding: 1.2em;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+/* Ensure the links themselves are bright and readable */
+nav a {
+    color: #ffffff !important; /* Force white text for maximum contrast */
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 5px 0;
+    /* Ensure the hover line is bright */
+    transition: color 0.3s;
+}
+
+nav a::after {
+    /* Bright blue accent for the underline */
+    background: #4a90e2 !important; 
+}
