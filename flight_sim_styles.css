@@ -9,7 +9,8 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: linear-gradient(135deg, #000000, #0a1128);
+  /* Dark Blue/Black Gradient */
+  background: linear-gradient(135deg, #000000, #0a1128); 
   color: #e0e0e0;
   line-height: 1.6;
   overflow-x: hidden;
@@ -30,8 +31,8 @@ header {
   /* Using the visibility background for transparency */
   padding: 5em 1em 4em;
   text-align: center;
-  /* F1 Racing Stripe & Stronger Shadow */
-  border-bottom: 5px solid #E10600; 
+  /* Replaced Red Stripe with Bright Blue */
+  border-bottom: 5px solid #4a90e2; 
   box-shadow: 0 8px 30px rgba(0,0,0,0.9);
   color: white;
 }
@@ -39,7 +40,7 @@ header {
 header h1 {
   font-family: 'Orbitron', sans-serif;
   font-size: 3.8em;
-  color: #0011ff; 
+  color: #4a90e2; /* Bright Blue Heading */
   margin-bottom: 0.2em;
   /* Sharper Glow */
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.9);
@@ -84,12 +85,12 @@ nav a::after {
   bottom: 0;
   width: 0%;
   height: 2px;
-  background: #E10600; /* F1 Red underline accent */
+  background: #4a90e2; /* Replaced Red underline accent with Bright Blue */
   transition: width 0.3s ease;
 }
 
 nav a:hover {
-    color: #E10600; /* F1 Red on hover */
+    color: #4a90e2; /* Replaced Red on hover with Bright Blue */
 }
 
 nav a:hover::after {
@@ -97,7 +98,7 @@ nav a:hover::after {
 }
 
 .nav-separator {
-    color: #E10600; /* F1 Red separator */
+    color: #ffffff; /* Replaced Red separator with White */
     font-size: 1.1em;
     font-weight: bold;
     margin: 0 5px;
@@ -153,21 +154,21 @@ section {
   box-shadow: 0 8px 20px rgba(74, 144, 226, 0.8); 
 }
 
-/* F1 ACCENT COLOR (Vibrant Red) */
+/* F1 ACCENT COLOR (Vibrant Blue) */
 .f1-accent {
-    color: #E10600; /* F1 Red */
+    color: #ffffff; /* Replaced Red accent with White */
     font-weight: bold;
 }
 
-/* F1 Button (Red/Black) */
+/* F1 Button (Blue/Black) */
 .f1-button {
-    background: #E10600; /* F1 Red */
-    box-shadow: 0 6px 15px rgba(225, 6, 0, 0.5); 
+    background: #0011ff; /* Darker Blue Button */
+    box-shadow: 0 6px 15px rgba(0, 17, 255, 0.5); 
 }
 
 .f1-button:hover {
-    background: #b80500; /* Darker Red on hover */
-    box-shadow: 0 8px 20px rgba(225, 6, 0, 0.8);
+    background: #000cbe; /* Darker Blue on hover */
+    box-shadow: 0 8px 20px rgba(0, 17, 255, 0.8);
 }
 
 
@@ -198,8 +199,8 @@ section {
 .product-card:hover {
   /* Lift Even Higher */
   transform: translateY(-10px); 
-  /* Stronger Red Glow */
-  box-shadow: 0 20px 40px rgba(225, 6, 0, 0.5), 0 0 5px rgba(255,255,255,0.2); 
+  /* Stronger Blue Glow */
+  box-shadow: 0 20px 40px rgba(74, 144, 226, 0.5), 0 0 5px rgba(255,255,255,0.2); 
 }
 
 .product-card img {
@@ -218,7 +219,7 @@ section {
 }
 
 .product-card .price {
-  color: #E10600; 
+  color: #4a90e2; /* Replaced Red Price with Bright Blue */
   font-family: 'Orbitron', sans-serif;
   font-weight: bold;
   font-size: 1.5em;
@@ -239,8 +240,8 @@ footer {
   font-size: 0.95em;
   color: #cccccc;
   box-shadow: inset 0 5px 15px rgba(0,0,0,0.8);
-  /* F1 Racing Stripe */
-  border-top: 5px solid #E10600; 
+  /* Replaced Red Stripe with Bright Blue */
+  border-top: 5px solid #4a90e2; 
 }
 
 /* --- Background Video Styles --- */
@@ -269,11 +270,12 @@ footer {
 }
 
 /* --- Media Queries --- */
-@media (max-width: 768px) 
+@media (max-width: 768px) { /* Added missing brace */
   header h1 {
     font-size: 2.8em;
   }
   .hero h2 {
     font-size: 2em;
   }
-  .products-grid
+  /* .products-grid - No change needed here */
+} /* Added missing brace */
